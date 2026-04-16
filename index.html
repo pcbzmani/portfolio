@@ -6,172 +6,21 @@
   <title>Manikandan Muthiah | Cloud Data Engineer</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <style>
-    /* &#9472;&#9472; Products Section Styles &#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472; */
-    .products-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .card.product-card {
-      position: relative;
-      overflow: hidden;
-    }
-
-    .product-header {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      margin-bottom: 1rem;
-    }
-
-    .product-icon {
-      font-size: 2.5rem;
-      flex-shrink: 0;
-    }
-
-    .product-title-block h3 {
-      font-size: 1.2rem;
-      font-weight: 700;
-      color: var(--text-primary, #e2e8f0);
-      margin: 0 0 0.2rem 0;
-    }
-
-    .product-title-block .product-type {
-      font-size: 0.75rem;
-      font-weight: 500;
-      color: var(--accent, #64b5f6);
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
-
-    .product-description {
-      color: var(--text-secondary, #94a3b8);
-      font-size: 0.9rem;
-      line-height: 1.6;
-      margin-bottom: 1rem;
-    }
-
-    .product-features {
-      list-style: none;
-      padding: 0;
-      margin: 0 0 1.2rem 0;
-      display: flex;
-      flex-direction: column;
-      gap: 0.4rem;
-    }
-
-    .product-features li {
-      font-size: 0.85rem;
-      color: var(--text-secondary, #94a3b8);
-      display: flex;
-      align-items: flex-start;
-      gap: 0.5rem;
-    }
-
-    .product-features li::before {
-      content: "&#9656;";
-      color: var(--accent, #64b5f6);
-      font-weight: 700;
-      flex-shrink: 0;
-      margin-top: 0.05rem;
-    }
-
-    .product-tech-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem;
-      margin-bottom: 1.2rem;
-    }
-
-    .product-tech-tags .tag {
-      background: rgba(100, 181, 246, 0.12);
-      color: var(--accent, #64b5f6);
-      border: 1px solid rgba(100, 181, 246, 0.25);
-      padding: 0.2rem 0.6rem;
-      border-radius: 9999px;
-      font-size: 0.75rem;
-      font-weight: 500;
-    }
-
-    .product-links {
-      display: flex;
-      gap: 0.75rem;
-      flex-wrap: wrap;
-    }
-
-    .btn-product {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      padding: 0.5rem 1rem;
-      border-radius: 0.5rem;
-      font-size: 0.82rem;
-      font-weight: 600;
-      text-decoration: none;
-      transition: all 0.2s;
-      cursor: pointer;
-    }
-
-    .btn-product-primary {
-      background: var(--accent, #64b5f6);
-      color: #0f172a;
-    }
-
-    .btn-product-primary:hover {
-      background: #90caf9;
-      transform: translateY(-1px);
-    }
-
-    .btn-product-secondary {
-      background: transparent;
-      color: var(--accent, #64b5f6);
-      border: 1px solid rgba(100, 181, 246, 0.4);
-    }
-
-    .btn-product-secondary:hover {
-      background: rgba(100, 181, 246, 0.1);
-      transform: translateY(-1px);
-    }
-
-    .product-badge {
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-      font-size: 0.7rem;
-      font-weight: 600;
-      padding: 0.2rem 0.6rem;
-      border-radius: 9999px;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-    }
-
-    .badge-live {
-      background: rgba(52, 211, 153, 0.15);
-      color: #34d399;
-      border: 1px solid rgba(52, 211, 153, 0.3);
-    }
-
-    .badge-pwa {
-      background: rgba(167, 139, 250, 0.15);
-      color: #a78bfa;
-      border: 1px solid rgba(167, 139, 250, 0.3);
-    }
-  </style>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 </head>
 <body>
+<canvas id="bg-canvas"></canvas>
   <div class="container">
 
-    <!-- &#9472;&#9472; HEADER / ABOUT &#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472; -->
+    <!-- ── HEADER / ABOUT ─────────────────────────────────────── -->
     <section class="about glass-panel">
       <div class="profile-image-container">
         <div class="profile-placeholder">MM</div>
       </div>
       <h1>Manikandan Muthiah</h1>
       <p class="title">Cloud Data Engineer</p>
-      <p class="subtitle">Senior Data Engineer &#183; Azure &#183; GCP &#183; Apache Spark &#183; Databricks</p>
+      <p class="subtitle">Senior Data Engineer · Azure · GCP · Apache Spark · Databricks</p>
 
       <div class="glass-panel objective-panel">
         <h2>Professional Objective</h2>
@@ -200,11 +49,11 @@
         <a href="https://medium.com/@manikandanmuthiah" target="_blank" rel="noopener" aria-label="Medium">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/></svg>
         </a>
-        <a href="resume.pdf" target="_blank" rel="noopener" aria-label="Resume">&#128196; Resume</a>
+        <a href="resume.pdf" target="_blank" rel="noopener" aria-label="Resume">📄 Resume</a>
       </div>
     </section>
 
-    <!-- &#9472;&#9472; TECHNICAL SKILLS &#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472; -->
+    <!-- ── TECHNICAL SKILLS ─────────────────────────────────── -->
     <section class="skills" id="skills">
       <h2 class="section-title">Technical Skills</h2>
       <div class="grid">
@@ -261,7 +110,7 @@
       </div>
     </section>
 
-    <!-- &#9472;&#9472; WORK EXPERIENCE &#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472; -->
+    <!-- ── WORK EXPERIENCE ──────────────────────────────────── -->
     <section class="experience" id="experience">
       <h2 class="section-title">Work Experience</h2>
       <div class="grid">
@@ -272,11 +121,11 @@
               <div>
                 <h3>Senior Software Engineer</h3>
                 <p class="company">EMAKINA (EPAM Systems), Doha</p>
-                <p class="duration">Sep 2023 &#8211; Present</p>
+                <p class="duration">Sep 2023 – Present</p>
               </div>
             </div>
             <div class="project-details">
-              <p class="project-name">Duty Free Business Intelligence &#183; Leading Aviation in Qatar</p>
+              <p class="project-name">Duty Free Business Intelligence · Leading Aviation in Qatar</p>
               <p class="env-label">Environment:</p>
               <div class="skill-tags">
                 <span class="tag">Azure Databricks</span><span class="tag">GCP</span><span class="tag">BigQuery</span>
@@ -300,11 +149,11 @@
               <div>
                 <h3>Senior Software Engineer</h3>
                 <p class="company">EPAM Systems, Chennai</p>
-                <p class="duration">Apr 2022 &#8211; Sep 2023</p>
+                <p class="duration">Apr 2022 – Sep 2023</p>
               </div>
             </div>
             <div class="project-details">
-              <p class="project-name">Aviation Inventory Analytics &#183; Leading Aviation in Qatar</p>
+              <p class="project-name">Aviation Inventory Analytics · Leading Aviation in Qatar</p>
               <p class="env-label">Environment:</p>
               <div class="skill-tags">
                 <span class="tag">Azure Databricks</span><span class="tag">Delta Tables</span><span class="tag">Dremio</span>
@@ -325,11 +174,11 @@
               <div>
                 <h3>Senior Data Engineer</h3>
                 <p class="company">EPAM Systems, Chennai</p>
-                <p class="duration">Apr 2022 &#8211; Jun 2022</p>
+                <p class="duration">Apr 2022 – Jun 2022</p>
               </div>
             </div>
             <div class="project-details">
-              <p class="project-name">Data Factory for CTC &#183; Retail &amp; Distribution</p>
+              <p class="project-name">Data Factory for CTC · Retail &amp; Distribution</p>
               <p class="env-label">Environment:</p>
               <div class="skill-tags">
                 <span class="tag">Azure Data Factory</span><span class="tag">Azure Databricks</span>
@@ -351,11 +200,11 @@
               <div>
                 <h3>Application Development Senior Analyst</h3>
                 <p class="company">Accenture, Chennai</p>
-                <p class="duration">Apr 2021 &#8211; Apr 2022</p>
+                <p class="duration">Apr 2021 – Apr 2022</p>
               </div>
             </div>
             <div class="project-details">
-              <p class="project-name">Home Buyer Transformation &#183; NA Mortgage Insurance</p>
+              <p class="project-name">Home Buyer Transformation · NA Mortgage Insurance</p>
               <p class="env-label">Environment:</p>
               <div class="skill-tags">
                 <span class="tag">Azure Data Factory</span><span class="tag">Azure Databricks</span>
@@ -377,11 +226,11 @@
               <div>
                 <h3>IT Analyst</h3>
                 <p class="company">TCS, Chennai</p>
-                <p class="duration">Jul 2016 &#8211; Apr 2021</p>
+                <p class="duration">Jul 2016 – Apr 2021</p>
               </div>
             </div>
             <div class="project-details">
-              <p class="project-name">Healthcare Data Modernization &#183; US Healthcare</p>
+              <p class="project-name">Healthcare Data Modernization · US Healthcare</p>
               <p class="env-label">Environment:</p>
               <div class="skill-tags">
                 <span class="tag">MS SQL</span><span class="tag">IBM DB2</span><span class="tag">Hive</span>
@@ -400,22 +249,22 @@
       </div>
     </section>
 
-    <!-- &#9472;&#9472; CERTIFICATIONS &#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472; -->
+    <!-- ── CERTIFICATIONS ───────────────────────────────────── -->
     <section class="certifications" id="certifications">
       <h2 class="section-title">Certifications</h2>
       <div class="grid">
         <div class="card cert-card">
           <div class="card-content">
-            <div class="cert-icon">&#127942;</div>
+            <div class="cert-icon">🏆</div>
             <h3>Databricks Certified Associate Developer for Apache Spark</h3>
-            <p class="cert-meta">Issued: April 2025 &#183; Expires: March 2027</p>
+            <p class="cert-meta">Issued: April 2025 · Expires: March 2027</p>
             <a href="#" class="btn-cert" target="_blank" rel="noopener">View Credential</a>
           </div>
           <div class="card-glow"></div>
         </div>
         <div class="card cert-card">
           <div class="card-content">
-            <div class="cert-icon">&#9729;&#65039;</div>
+            <div class="cert-icon">☁️</div>
             <h3>Microsoft Azure Data Fundamentals</h3>
             <p class="cert-meta">Microsoft Certified</p>
             <a href="#" class="btn-cert" target="_blank" rel="noopener">View Credential</a>
@@ -424,7 +273,7 @@
         </div>
         <div class="card cert-card">
           <div class="card-content">
-            <div class="cert-icon">&#128272;</div>
+            <div class="cert-icon">🔐</div>
             <h3>Google Cloud: Implement Cloud Security Fundamentals</h3>
             <p class="cert-meta">Google Cloud Skill Badge</p>
           </div>
@@ -432,7 +281,7 @@
         </div>
         <div class="card cert-card">
           <div class="card-content">
-            <div class="cert-icon">&#129302;</div>
+            <div class="cert-icon">🤖</div>
             <h3>Google Cloud: Perform Foundational Data, ML, and AI Tasks</h3>
             <p class="cert-meta">Google Cloud Skill Badge</p>
           </div>
@@ -440,7 +289,7 @@
         </div>
         <div class="card cert-card">
           <div class="card-content">
-            <div class="cert-icon">&#128202;</div>
+            <div class="cert-icon">📊</div>
             <h3>Google Cloud: Manage Data Models in Looker</h3>
             <p class="cert-meta">Google Cloud Skill Badge</p>
             <a href="https://www.credly.com/" class="btn-cert" target="_blank" rel="noopener">View All Badges on Credly</a>
@@ -450,13 +299,13 @@
       </div>
     </section>
 
-    <!-- &#9472;&#9472; EDUCATION &#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472; -->
+    <!-- ── EDUCATION ────────────────────────────────────────── -->
     <section class="education" id="education">
       <h2 class="section-title">Education</h2>
       <div class="card edu-card">
         <div class="card-content">
-          <div class="edu-icon">&#127891;</div>
-          <h3>Bachelor of Engineering (B.E.) &#8212; Electrical and Electronics Engineering</h3>
+          <div class="edu-icon">🎓</div>
+          <h3>Bachelor of Engineering (B.E.) — Electrical and Electronics Engineering</h3>
           <p class="edu-meta">Anna University, Chennai</p>
           <p class="edu-cgpa">CGPA: 9.13</p>
         </div>
@@ -464,16 +313,16 @@
       </div>
     </section>
 
-    <!-- &#9472;&#9472; LATEST ARTICLES &#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472; -->
+    <!-- ── LATEST ARTICLES ──────────────────────────────────── -->
     <section class="articles" id="articles">
       <h2 class="section-title">Latest Articles</h2>
       <div class="grid">
         <div class="card article-card">
           <div class="card-content">
             <span class="article-tag">Data Engineering</span>
-            <h3>Hosting n8n and Building an English&#8211;Hindi Voice Translation Bot</h3>
+            <h3>Hosting n8n and Building an English–Hindi Voice Translation Bot</h3>
             <p class="article-desc">A guide on setting up n8n and creating a voice translation bot using Telegram.</p>
-            <a href="https://medium.com/@manikandanmuthiah" class="btn-article" target="_blank" rel="noopener">Read on Medium &#8594;</a>
+            <a href="https://medium.com/@manikandanmuthiah" class="btn-article" target="_blank" rel="noopener">Read on Medium →</a>
           </div>
           <div class="card-glow"></div>
         </div>
@@ -482,7 +331,7 @@
             <span class="article-tag">BigQuery</span>
             <h3>Applying CMEK Encryption to BigQuery Dataset and Tables</h3>
             <p class="article-desc">Security best practices for BigQuery data encryption.</p>
-            <a href="https://medium.com/@manikandanmuthiah" class="btn-article" target="_blank" rel="noopener">Read on Medium &#8594;</a>
+            <a href="https://medium.com/@manikandanmuthiah" class="btn-article" target="_blank" rel="noopener">Read on Medium →</a>
           </div>
           <div class="card-glow"></div>
         </div>
@@ -491,19 +340,19 @@
             <span class="article-tag">Dataproc</span>
             <h3>Submit job in Dataproc using Composer</h3>
             <p class="article-desc">Orchestrating Dataproc jobs using Cloud Composer.</p>
-            <a href="https://medium.com/@manikandanmuthiah" class="btn-article" target="_blank" rel="noopener">Read on Medium &#8594;</a>
+            <a href="https://medium.com/@manikandanmuthiah" class="btn-article" target="_blank" rel="noopener">Read on Medium →</a>
           </div>
           <div class="card-glow"></div>
         </div>
       </div>
     </section>
 
-    <!-- &#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;
-         &#9733;  PRODUCTS SECTION &#8212; NEW  &#9733;
-         &#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552; -->
+    <!-- ════════════════════════════════════════════════════════
+         ★  PRODUCTS SECTION — NEW  ★
+         ════════════════════════════════════════════════════════ -->
     <section class="products" id="products">
       <h2 class="section-title">Products</h2>
-      <p class="section-subtitle">Side projects I've built and shipped &#8212; from personal finance tools to cognitive games.</p>
+      <p class="section-subtitle">Side projects I've built and shipped — from personal finance tools to cognitive games.</p>
 
       <div class="products-grid">
 
@@ -512,10 +361,10 @@
           <span class="product-badge badge-live">Live</span>
           <div class="card-content">
             <div class="product-header">
-              <div class="product-icon">&#128176;</div>
+              <div class="product-icon">💰</div>
               <div class="product-title-block">
                 <h3>MyFinance</h3>
-                <span class="product-type">Personal Finance App &#183; PWA</span>
+                <span class="product-type">Personal Finance App · PWA</span>
               </div>
             </div>
 
@@ -524,10 +373,10 @@
             </p>
 
             <ul class="product-features">
-              <li>Live indices &#8212; NSE Nifty 50, Bank Nifty, NASDAQ, S&amp;P 500, Hang Seng, Nikkei &amp; more</li>
-              <li>FX &amp; Gold rates &#8212; USD/INR, QAR/INR, live gold prices in INR and QAR</li>
+              <li>Live indices — NSE Nifty 50, Bank Nifty, NASDAQ, S&amp;P 500, Hang Seng, Nikkei &amp; more</li>
+              <li>FX &amp; Gold rates — USD/INR, QAR/INR, live gold prices in INR and QAR</li>
               <li>Investment portfolio tracker with P&amp;L and gain/loss analytics</li>
-              <li>Cash flow management &#8212; income, expenses, and category breakdowns</li>
+              <li>Cash flow management — income, expenses, and category breakdowns</li>
               <li>Insurance policy and subscription management</li>
               <li>Secure password vault for credentials</li>
             </ul>
@@ -543,10 +392,10 @@
 
             <div class="product-links">
               <a href="https://pcbzmani.netlify.app/" target="_blank" rel="noopener" class="btn-product btn-product-primary">
-                &#127760; Live App
+                🌐 Live App
               </a>
               <a href="https://github.com/pcbzmani/myfinancedata" target="_blank" rel="noopener" class="btn-product btn-product-secondary">
-                &#8997; GitHub
+                ⌥ GitHub
               </a>
             </div>
           </div>
@@ -558,21 +407,21 @@
           <span class="product-badge badge-pwa">PWA</span>
           <div class="card-content">
             <div class="product-header">
-              <div class="product-icon">&#129504;</div>
+              <div class="product-icon">🧠</div>
               <div class="product-title-block">
                 <h3>Brain Games</h3>
-                <span class="product-type">Cognitive Game App &#183; Progressive Web App</span>
+                <span class="product-type">Cognitive Game App · Progressive Web App</span>
               </div>
             </div>
 
             <p class="product-description">
-              A progressive web app with 500 levels of cognitive challenges across 6 unique game types &#8212; designed to sharpen memory, logic, and problem-solving skills.
+              A progressive web app with 500 levels of cognitive challenges across 6 unique game types — designed to sharpen memory, logic, and problem-solving skills.
             </p>
 
             <ul class="product-features">
               <li>500 progressive levels with increasing difficulty</li>
               <li>6 distinct cognitive game types</li>
-              <li>Installable as a PWA &#8212; works offline on mobile and desktop</li>
+              <li>Installable as a PWA — works offline on mobile and desktop</li>
               <li>Smooth level navigation with sound effects and result overlays</li>
               <li>Built with modern React + TypeScript stack</li>
             </ul>
@@ -588,10 +437,10 @@
 
             <div class="product-links">
               <a href="https://pcbzmani.github.io/braingames/" target="_blank" rel="noopener" class="btn-product btn-product-primary">
-                &#127918; Play Now
+                🎮 Play Now
               </a>
               <a href="https://github.com/pcbzmani/braingames" target="_blank" rel="noopener" class="btn-product btn-product-secondary">
-                &#8997; GitHub
+                ⌥ GitHub
               </a>
             </div>
           </div>
@@ -602,15 +451,15 @@
         <div class="card product-card">
           <div class="card-content">
             <div class="product-header">
-              <div class="product-icon">&#128256;</div>
+              <div class="product-icon">🔀</div>
               <div class="product-title-block">
                 <h3>SplitIt</h3>
-                <span class="product-type">Expense Splitter &#183; Web App</span>
+                <span class="product-type">Expense Splitter · Web App</span>
               </div>
             </div>
 
             <p class="product-description">
-              A lightweight web app to split shared expenses fairly among groups &#8212; perfect for trips, dinners, or any group activity.
+              A lightweight web app to split shared expenses fairly among groups — perfect for trips, dinners, or any group activity.
             </p>
 
             <div class="product-tech-tags">
@@ -621,7 +470,7 @@
 
             <div class="product-links">
               <a href="https://github.com/pcbzmani/splitit" target="_blank" rel="noopener" class="btn-product btn-product-secondary">
-                &#8997; GitHub
+                ⌥ GitHub
               </a>
             </div>
           </div>
@@ -632,15 +481,15 @@
         <div class="card product-card">
           <div class="card-content">
             <div class="product-header">
-              <div class="product-icon">&#127760;</div>
+              <div class="product-icon">🌐</div>
               <div class="product-title-block">
                 <h3>Live Translate</h3>
-                <span class="product-type">Voice Translation Bot &#183; n8n + Telegram</span>
+                <span class="product-type">Voice Translation Bot · n8n + Telegram</span>
               </div>
             </div>
 
             <p class="product-description">
-              A real-time English&#8211;Hindi voice translation bot powered by n8n automation and Telegram, demonstrating AI workflow integration with LLM pipelines.
+              A real-time English–Hindi voice translation bot powered by n8n automation and Telegram, demonstrating AI workflow integration with LLM pipelines.
             </p>
 
             <div class="product-tech-tags">
@@ -652,7 +501,7 @@
 
             <div class="product-links">
               <a href="https://github.com/pcbzmani/livetranslate" target="_blank" rel="noopener" class="btn-product btn-product-secondary">
-                &#8997; GitHub
+                ⌥ GitHub
               </a>
             </div>
           </div>
@@ -661,19 +510,19 @@
 
       </div>
     </section>
-    <!-- &#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;
+    <!-- ════════════════════════════════════════════════════════
          END PRODUCTS SECTION
-         &#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552; -->
+         ════════════════════════════════════════════════════════ -->
 
-    <!-- &#9472;&#9472; GITHUB PROJECTS &#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472; -->
+    <!-- ── GITHUB PROJECTS ──────────────────────────────────── -->
     <section class="projects" id="projects">
       <h2 class="section-title">Projects</h2>
       <div class="card project-repo-card">
         <div class="card-content">
-          <div class="repo-icon">&#128230;</div>
+          <div class="repo-icon">📦</div>
           <h3>GitHub Repositories</h3>
           <p>Explore my 39+ repositories covering various data engineering topics and tools.</p>
-          <a href="https://github.com/pcbzmani" target="_blank" rel="noopener" class="btn-repo">View Code &#8594;</a>
+          <a href="https://github.com/pcbzmani" target="_blank" rel="noopener" class="btn-repo">View Code →</a>
         </div>
         <div class="card-glow"></div>
       </div>
@@ -681,9 +530,10 @@
 
   </div>
 
-  <footer style="text-align:center;padding:2rem 1rem 1.5rem;color:var(--text-secondary,#94a3b8);font-size:0.82rem;border-top:1px solid rgba(100,181,246,0.1);margin-top:2rem;">
-    <p>&#169; <span id="copy-year"></span> Manikandan Muthiah &#183; Cloud Data Engineer</p>
+  <footer class="site-footer">
+    <p>© <span id="copy-year"></span> Manikandan Muthiah · Cloud Data Engineer</p>
   </footer>
+
   <script src="script.js"></script>
   <script>document.getElementById('copy-year').textContent = new Date().getFullYear();</script>
 </body>
